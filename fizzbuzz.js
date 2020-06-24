@@ -3,28 +3,35 @@
 // Here, we create our main function.
 function fizzbuzz() {
     // Put your code here..
-    for (let i = 1; i < 200; i++) {
-        let result = '';
+    for (let i = 254; i < 260; i++) {
+        let result = [];
 
         if(i % 3 === 0){
-            result += 'Fizz'
+            result.push('Fizz')
         };
 
         if(i % 13 === 0){
-            result += 'Fezz'
+            result.push('Fezz')
         };
 
         if(i % 5 === 0){
-            result += 'Buzz'
+            result.push('Buzz')
         };
 
         if(i % 7 === 0){
-            result += 'Bang'};
+            result.push('Bang')
+        };
 
         if(i % 11 === 0){
-            result = (result === 'Fezz') ? result += 'Bong' : 'Bong'
+            result = (result[0] === 'Fezz') ? result.push('Bong') : ('Bong')
+        }
+        if(i % 17 === 0 && Array.isArray(result)){
+            result = result.reverse()
         }
 
+        if(Array.isArray(result)){
+            result = result.join('')
+        }
 
         if(result == ''){
             result = i;
