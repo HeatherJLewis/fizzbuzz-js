@@ -1,22 +1,24 @@
 
 
 // Here, we create our main function.
-function fizzbuzz(number) {
+function fizzbuzz() {
     // Put your code here..
-    for (let i = 0; i < number; i++) {
-        if(i % 3 === 0 && i % 5 === 0){
-            console.log('fizz buzz');
+    for (let i = 1; i < 11; i++) {
+        let result = '';
+        if(i % 3 === 0){
+            result += 'Fizz';
         } else if (i % 5 === 0)
         {
-            console.log('buzz');
-        } else if (i % 3 === 0) {
-            console.log('fizz');
-
+            result += 'Buzz';
+        } else if (i % 7 === 0){
+            result += 'Bang'
         } else {
-            console.log(i)
+            result = i;
         }
+    console.log(result);
+
     }
 }
 
 // Now we run the main function...
-fizzbuzz(10); // if we add a breakpoint here and use step into it will go into function
+fizzbuzz(); // if we add a breakpoint here and use step into it will go into function
